@@ -30,7 +30,7 @@ const UserProvider = ({ children }) => {
       if (response.data.results.length) {
         if (response.data.results[0] && response.data.results[0].zestimate) {
           setZillowAPIResponse(response.data.results[0])
-          const offerZestimatePrice  = Number(response.data.results[0]?.zestimate) - 30000
+          const offerZestimatePrice  = Number(response.data.results[0]?.zestimate) - 40000
           const price = offerZestimatePrice?.toLocaleString('en-US',options)
           setOfferPrice(price)
         } else {
@@ -38,7 +38,7 @@ const UserProvider = ({ children }) => {
 
           if (firstZstimateResult && firstZstimateResult[0]) {
             setZillowAPIResponse(firstZstimateResult[0])
-            const offerZestimatePrice  = Number(firstZstimateResult[0]?.zestimate) - 30000
+            const offerZestimatePrice  = Number(firstZstimateResult[0]?.zestimate) - 40000
             const price = offerZestimatePrice?.toLocaleString('en-US',options)
             setOfferPrice(price)
           }
