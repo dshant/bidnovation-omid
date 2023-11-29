@@ -1,0 +1,208 @@
+.section{
+  background: rgb(247, 247, 247);
+  background: linear-gradient(to top, white 180px, var(--cloud-color) 180px);
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  /* background-color: rgb(247, 247, 247); */
+  -webkit-box-align: center;
+  align-items: center;
+  /* padding-top: 50px; */
+  padding-bottom: 70px;
+  /* background: linear-gradient(to top, white 119px, var(--cloud-color) 119px); */
+}
+
+.main .heading {
+  font-size: 4.4rem;
+  line-height: 5.6rem;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  text-align: center;
+}
+
+.main .description {
+  font-family: var(--main-font-family);
+  font-size: 1.8rem;
+  line-height: 28px !important;
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.main .ratingsHolder {
+  width: 90%;
+  max-width: 685px;
+  height: 114px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 80px;
+}
+.main .ratingsHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .ratingsHolder .ratings {
+  background-image: url(/images/stars.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 114px;
+  display: flex;
+}
+.main .ratingsHolder .ratings::before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/images/fillStar.png);
+  content: "";
+  height: 100%;
+  width: 100%;
+  transform: translateZ(0px);
+  transition: 1.7s ease-out 0s width;
+  will-change: width;
+  animation: widthAmimated 3s;
+}
+
+@keyframes widthAmimated {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.sliderWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+  /* padding-bottom: 50px; */
+  /* margin-top: -250px; */
+}
+.animatedSlider {
+  width: 3672px;
+  align-self: start;
+  height: 275px;
+  position: relative;
+  display: flex;
+  gap: 30px;
+  animation: 55000ms linear 0s infinite normal none running slide;
+}
+.animatedSlider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animatedSlider .card {
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 8px 0px,
+    rgba(0, 0, 0, 0.16) 0px 31px 30px -18px;
+  border-radius: 12px;
+  height: 235px;
+  margin-bottom: 20px;
+  min-width: 380px;
+  background-color: var(--white);
+}
+.animatedSlider .card .cardProfile{
+  display: flex;
+  gap: 10px;
+}
+.animatedSlider .card .cardProfile img{
+  width: 5.4rem;
+  height: 5.4rem;
+  padding: 2px;
+  position: relative;
+  top: -5px;
+  border-radius: 50%;
+}
+.animatedSlider .card .name {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+  text-align: left;
+}
+.animatedSlider .card span.name{
+  color: rgb(183, 183, 183);
+}
+.animatedSlider .card .review {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: var(--dark-grey);
+}
+.animatedSlider .card .review a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 724px) {
+  .main .ratingsHolder{
+    margin-top: 0px;
+  }
+  .animatedSlider:hover {
+    animation-play-state: running;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main .ratingsHolder .ratings {
+    width: 325px;
+    height: 54px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section{
+    padding-top: 25px;
+  }
+  .main {
+    padding-bottom: 50px;
+  }
+  .main .heading{
+   font-size: 2.8rem;
+   line-height: 3.6rem; 
+  }
+  .main .description{
+    max-width: 650px;
+  }
+  .main .ratingsHolder{
+    margin-top: 40px;
+    height: auto;
+  }
+  .main .ratingsHolder .ratings {
+    width: 325px;
+    height: 54px;
+  }
+}
+
+/* 
+@media screen and (max-width: 400px) {
+  .main .ratingsHolder .ratings {
+    width: 250px;
+    height: 42px;
+  }
+} */

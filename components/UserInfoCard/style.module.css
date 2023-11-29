@@ -1,0 +1,119 @@
+.buttonHolder {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.buttonHolder .button {
+  width: 230px;
+  height: 60px;
+  margin-top: 30px;
+  font-size: 1.8rem !important;
+  letter-spacing: 0.2px !important;
+}
+.button.buttonLoading {
+  width: 230px;
+  height: 60px;
+  margin-top: 30px;
+  font-size: 1.8rem !important;
+  letter-spacing: 0.2px !important;
+}
+
+.scheduleHeading {
+  font-size: 1.6rem;
+}
+.formContainer {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 90%;
+  min-width: 460px;
+}
+.formContainer .textField {
+  border-radius: 4px;
+  text-align: left;
+  background-color: var(--white);
+}
+.formContainer .textField label {
+  line-height: unset;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #b7b7b7;
+}
+.formContainer .textField input {
+  font-size: 1.4rem;
+  color: var(--dark-grey);
+  z-index: 55;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  padding: 19px 16px 12px 16px;
+}
+.formContainer .textField fieldset legend {
+  display: none;
+}
+.formContainer .textField p {
+  font-size: 1.2rem;
+}
+.header {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 5.5rem;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: capitalize;
+  white-space: pre;
+  text-align: center;
+  padding-top: 160px;
+  color: var(--primary-color);
+}
+
+.infoContainer {
+  text-align: center;
+}
+
+.messageText {
+  margin-top: 20px;
+}
+
+.messageText p {
+  font-size: 1.8rem;
+  line-height: 28px;
+}
+
+.priceDescription {
+  margin-top: 20px;
+}
+
+.priceDescription p {
+  font-size: 1.8rem;
+  line-height: 28px;
+  color: var(--primary-color);
+}
+
+.policyText {
+  margin-top: 2px;
+}
+
+.policyText p {
+  font-size: 1.8rem;
+  line-height: 28px;
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 724px) {
+  .formContainer {
+    min-width: auto;
+  }
+}
+.dropdown {
+  font-size: 1.4rem !important;
+}
+
+@media screen and (max-width: 650px) {
+  .buttonHolder .button {
+    width: 100%;
+  }
+
+  .formContainer .textField input {
+    font-size: 2rem;
+  }
+}

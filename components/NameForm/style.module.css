@@ -1,0 +1,13 @@
+.inputContainer {
+    display: flex;
+     width: 100%;
+     gap: 20px;
+     margin-top: 30px;
+}
+.textField {
+    font-size: 30px
+}
+
+.error fieldset {
+    border-color: red;
+}

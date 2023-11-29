@@ -1,0 +1,240 @@
+.main {
+  position: relative;
+  height: auto;
+  min-height: 617px;
+  width: 100vw;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    to top,
+    rgb(247, 247, 247) 27px,
+    transparent 27px
+  );
+  padding: 15px 20px 140px;
+  /* overflow: hidden; */
+  transition-duration: 0.3s;
+}
+.firstStepMain {
+  height: 670px !important;
+}
+.secondStepMain {
+  height: 670px !important;
+}
+.thirdStepMain {
+  height: 800px !important;
+}
+
+.main .backgroundImage {
+  display: flex;
+  position: absolute;
+  top: 42px;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  opacity: 1;
+  overflow: hidden;
+  background: linear-gradient(
+    to top,
+    var(--cloud-color) 56px,
+    transparent 56px
+  );
+}
+.main .backgroundImage .left {
+  position: relative;
+}
+.main .backgroundImage .left .carAnimation {
+  height: 245px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 680px;
+  z-index: 1;
+}
+.main .backgroundImage .left .carAnimation svg {
+  position: absolute;
+  bottom: -13px;
+  right: -72px;
+  left: auto;
+  height: 245px !important;
+}
+.main .backgroundImage .left .catAnimation {
+  height: 100%;
+  position: relative;
+  /* top: 422px;
+  left: -130px;
+  width: 680px;
+  z-index: 1; */
+}
+.main .backgroundImage .left .catAnimation svg {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  left: auto;
+  min-width: 781px;
+  bottom: -95px;
+}
+
+.main .backgroundImage .imageSpace {
+  flex: 0 1 0%;
+}
+
+.main .cloud {
+  position: absolute;
+  background: url(/images/cloud.png);
+  top: 20px;
+  height: 450px;
+  left: 0;
+  background-size: contain;
+  width: 3000px;
+  animation: 85000ms linear 0s infinite normal none running slide;
+}
+
+.main .childrenContainer {
+  z-index: 100;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.main .backgroundImage .right .manAnimation {
+  height: 100%;
+  position: relative;
+  /* height: 493px;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  width: 781px;
+  z-index: 1; */
+}
+.main .backgroundImage .right .manAnimation svg {
+  min-width: 781px;
+  position: absolute;
+  bottom: -7px;
+  left: -1px;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 27px 0px 201px;
+  }
+  .main .backgroundImage .left {
+    background: url(/images/leftHouse.svg) right bottom / 615px 471px no-repeat;
+    flex: 1 1 0%;
+    display: block;
+  }
+  .main .backgroundImage .left .catAnimation svg {
+    bottom: -95px;
+  }
+  .main.thirdStepMain .backgroundImage .left .catAnimation svg {
+    bottom: -157px;
+  }
+  .main.fourthStepMain .backgroundImage .left .catAnimation svg {
+    bottom: -65px;
+  }
+
+  .main .backgroundImage .right {
+    background: url(/images/rightHouse.svg) left bottom / 615px 471px no-repeat;
+    display: block;
+    flex: 1 1 0%;
+  }
+  .main .backgroundImage .right .manAnimation svg {
+    height: 493px !important;
+  }
+  .main .backgroundImage .imageSpace {
+    flex: 0 0 250px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    padding-top: 15px;
+    padding-bottom: 266px;
+  }
+  .main .backgroundImage .imageSpace {
+    flex: 0 0 444px;
+  }
+}
+@media screen and (min-width: 1670px) {
+  .main .backgroundImage {
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+  }
+  .main .backgroundImage .left {
+    background-position: left bottom;
+    flex: 0 0 625px;
+  }
+  .main .backgroundImage .right {
+    background-position: right bottom;
+    flex: 0 0 625px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main .backgroundImage .left .carAnimation,
+  .main .backgroundImage .left .catAnimation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    overflow: hidden;
+    padding: 15px 0px 140px;
+  }
+  .firstStepMain {
+    height: auto !important;
+  }
+  .secondStepMain {
+    height: auto !important;
+  }
+  .thirdStepMain {
+    height: auto !important;
+  }
+  .main .backgroundImage .right .manAnimation {
+    width: 461px;
+    height: 353px;
+    position: absolute;
+    bottom: 12px;
+    right: 100px;
+  }
+
+  .main .backgroundImage {
+    top: 10px;
+    transition: opacity 1s ease-in-out 0s;
+    background: url(/images/rightHouse.svg) right bottom / 461px 353px no-repeat;
+  }
+  .hideBackgroundOnMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main.firstStepMain {
+    height: 750px !important;
+  }
+  .main.secondStepMain {
+    height: 834px !important;
+  }
+  .main.thirdStepMain {
+    height: 1100px !important;
+  }
+  .main .backgroundImage .right .manAnimation {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main .backgroundImage {
+    background-position: left bottom;
+  }
+}
+.dropdown {
+  font-size: 1.4rem !important;
+}

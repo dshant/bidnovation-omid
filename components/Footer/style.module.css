@@ -1,0 +1,25 @@
+.main {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid var(--light-grey);
+    background-color: var(--white);
+}
+.main .footerContent {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.main .footerContent .description {
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 724px) {
+    .main .footerContent {
+        flex-direction: column;
+    }
+}

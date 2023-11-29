@@ -1,0 +1,87 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  /* height: calc(100vh - 100px); */
+  width: 100vw;
+  z-index: 40;
+}
+.main .heading {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  color: var(--dark-grey);
+  font-size: 5.5rem;
+  line-height: 1.3;
+}
+.main .userOffer {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  color: var(--dark-grey);
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+.main .description {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 5px;
+  max-width: 850px;
+  text-align: center;
+  font-size: 5.5rem;
+  line-height: 1.3;
+  color: var(--dark-grey);
+  font-family: var(--font-family);
+}
+.main .address {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 15px;
+  color: var(--dark-grey);
+  /* font-family: monospace, monospace; */
+  font-size: 1.8rem;
+}
+.main .priceBox {
+  width: auto;
+  height: auto;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  border: 2px solid var(--primary-color);
+}
+.main .price {
+  font-size: 5.8rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1;
+}
+.main .policy {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: var(--dark-grey);
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .main .heading,
+  .main .description {
+    font-size: 2.8rem;
+    line-height: 36px;
+  }
+  .main .policy {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "lemonade-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.16",
+    "@react-google-maps/api": "^2.19.2",
+    "axios": "^1.6.0",
+    "firebase": "^10.5.2",
+    "lottie-react": "^2.4.0",
+    "next": "14.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-places-autocomplete": "^7.3.0",
+    "react-reveal": "^1.2.2",
+    "react-star-ratings": "^2.3.0",
+    "swiper": "^10.3.1"
+  }
+}

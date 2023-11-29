@@ -1,0 +1,193 @@
+:root {
+  --white: #fff;
+  --primary-color: #ff0083;
+  --cloud-color: #f7f7f7;
+  --button-shadow-color: rgb(255 0 131 / 50%);
+  --light-grey: #ececec;
+  --dark-grey: #4a4a4a;
+  --button-shadow: 0px 10px 40px -10px;
+  --font-family: "Merriweather", sans-serif;
+  --font-weight: 400;
+  --font-weight-light: 700;
+  --main-font-family: "Lato", sans-serif;
+}
+
+html,
+body {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+*::selection {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+button {
+  font-weight: 700;
+  font-family: var(--main-font-weight);
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--primary-color);
+  font-size: 1.4rem !important;
+  color: var(--white);
+  padding: 10px 14px;
+  cursor: pointer;
+  text-transform: uppercase !important;
+  box-shadow: rgba(255, 0, 131, 0.5) 0px 10px 40px -10px;
+  border-radius: 4px;
+  letter-spacing: 0.8px !important;
+  border: 0;
+  /* transform: translateY(-5px); */
+  /* transition-duration: .2s; */
+}
+
+button:disabled {
+  cursor: not-allowed;
+  /* transform: translateY(0); */
+  /* transition-duration: .2s; */
+}
+
+.MuiLinearProgress-bar {
+  background: var(--primary-color);
+  border-radius: 20px;
+}
+
+.MuiLinearProgress-root {
+  background: var(--light-grey);
+}
+
+.MuiCircularProgress-circle {
+  color: var(--primary-color);
+}
+
+p {
+  font-family: var(--main-font-family);
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 28px;
+  font-weight: var(--font-weight);
+}
+
+.MuiFormHelperText-root {
+  margin-left: 0;
+}
+
+.mainDiv {
+  padding-top: 63px;
+}
+
+.MuiTooltip-popper > div {
+  font-size: 1.2rem !important;
+}
+
+.text-field .MuiInputLabel-shrink {
+  transform: translate(14px, 4px) scale(0.75) !important;
+}
+
+.text-field label.Mui-focused {
+  color: var(--primary-color) !important;
+}
+
+.text-field label.Mui-error {
+  color: #d32f2f !important;
+}
+
+.text-field div.Mui-focused fieldset {
+  border-color: var(--primary-color) !important;
+  border-width: 1.5px !important;
+}
+
+.text-field div.Mui-error fieldset {
+  border-color: #d32f2f !important;
+}
+
+.text-field .MuiSelect-select {
+  font-size: 1.3rem;
+}
+
+.MuiOutlinedInput-root:hover fieldset {
+  border-color: #d9d9d9 !important;
+}
+.MuiSelect-select {
+  min-width: 150px;
+  padding-top: 24.5px;
+  padding-bottom: 10.5px;
+  font-weight: 700;
+}
+
+fieldset {
+  background-color: var(--white);
+  border-color: var(--light-grey) !important;
+}
+
+.MuiSelect-select {
+  color: var(--dark-grey);
+  position: relative;
+  z-index: 5;
+}
+
+.MuiSelect-icon {
+  z-index: 5;
+}
+
+.MuiSelect-nativeInput {
+  display: none;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(255 0 131 / 20%);
+  border-bottom-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader.white {
+  border-color: rgb(255 255 255 / 90%);
+  transition-duration: 0.2s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainDiv {
+    padding-top: 160px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body:has(.show-map) .globalMain {
+    height: 850px !important;
+  }
+  body:has(.phoneInputClass) .globalMain {
+    height: 1230px !important;
+  }
+  .MuiSelect-select {
+    font-size: 2rem !important;
+  }
+}

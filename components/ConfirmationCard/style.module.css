@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    /* height: calc(100vh - 100px); */
+    width: 100vw;
+}
+.main .heading {
+    /* max-width: 600px; */
+    text-align: center;
+}
+.main .description {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+.main .description pre {
+    display: inline;
+}
+.main .address {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--dark-grey);
+    /* font-family: monospace, monospace; */
+    font-size: 1.8rem;
+}
+.main .descriptionFooter {
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+@media screen and (max-width: 768px){
+.main .heading {
+    font-size: 2.8rem;
+    line-height: 36px;
+}
+}
